@@ -1,0 +1,167 @@
+/* Universal Box-Sizing */
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+    font-size: 16px;
+    color: #333; /* Darker text for better readability */
+    background-color: #f0f2f5; /* Lighter, subtle background */
+    margin: 0;
+    display: flex; /* Use flexbox for centering wrapper */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Focus Outline Reset */
+:focus {
+    outline: none;
+}
+
+/* Textarea Resizing */
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Form Element Font Consistency */
+input, textarea, select, button {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+/* List Reset */
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Image Responsiveness */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* Wrapper for Form Centering */
+.wrapper {
+    max-width: 500px; /* Slightly reduced max-width for a more compact form */
+    width: 100%;
+    padding: 20px; /* Add some padding around the form */
+}
+
+/* Form Specific Styles */
+.registration-form {
+    width: 100%;
+}
+
+#wizard {
+    background: #fff;
+    border-radius: 12px; /* Smoother corners */
+    padding: 40px; /* Adjusted padding */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* More pronounced, modern shadow */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Animation for subtle hover effect */
+}
+
+#wizard:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.form-title {
+    font-family: 'Poppins', sans-serif; /* Keep Poppins for headings */
+    font-size: 28px; /* Larger title */
+    color: #6645eb; /* Primary accent color */
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Spacing between form groups */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500; /* Slightly bolder labels */
+    color: #555;
+    font-size: 15px;
+}
+
+.form-control {
+    height: 48px; /* Taller input fields */
+    border: 1px solid #e0e0e0; /* Lighter border */
+    background: #fdfdfd; /* Very light background for inputs */
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 8px; /* Rounded input fields */
+    transition: all 0.3s ease-in-out; /* Smooth transition for focus */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+}
+
+.form-control:focus {
+    border-color: #6645eb; /* Accent color on focus */
+    box-shadow: 0 0 0 3px rgba(102, 69, 235, 0.2); /* Soft glow effect on focus */
+    background-color: #fff;
+}
+
+.form-control::placeholder {
+    color: #999;
+    font-size: 15px;
+}
+
+/* Submit Button Styles */
+.btn-submit {
+    display: block;
+    width: 100%;
+    height: 55px; /* Taller button */
+    background: #6645eb; /* Primary accent color */
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(102, 69, 235, 0.3); /* Subtle shadow */
+}
+
+.btn-submit:hover {
+    background: #5a3bc9; /* Slightly darker on hover */
+    box-shadow: 0 6px 20px rgba(102, 69, 235, 0.4); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Bootstrap Overrides for better integration (optional, but good practice) */
+.bg-primary {
+    background-color: #f0f2f5 !important; /* Override Bootstrap's bg-primary for body */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #wizard {
+        padding: 30px 20px; /* More padding on smaller screens */
+    }
+    .form-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-control {
+        height: 45px;
+        font-size: 15px;
+    }
+    .btn-submit {
+        height: 50px;
+        font-size: 16px;
+    }
+}
